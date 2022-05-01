@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>HackTheMaze</title>
+  </head>
+  <body>
+    <header>
+      <h1>HackTheMaze</h1>
+    </header>
+    <main>
+      <canvas
+        id="canvas"
+        width="620"
+        height="620"
+        style="display: none"
+      ></canvas>
+      <div class="controls" id="mazeControls">
+        <div id="join-button"></div>
+        <div class="bottom-controls">
+          <div class="sliderContainer">
+            <input
+              type="range"
+              min="1"
+              max="50"
+              value="15"
+              class="slider"
+              id="sizeSlider"
+            />
+            <div class="textRow">
+              <p>Maze Size:</p>
+              <p id="sliderValue"></p>
+            </div>
+          </div>
+          <div class="textRow">
+            <input type="checkbox" name="Key version" id="keyCheckbox" />
+            <label for="keyCheckbox">Key version 🗝️</label>
+          </div>
+          <button id="create">Create</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="htmlscript.js" defer></script>
+    <script type="module" src="auxFunctions.js" defer></script>
+  </body>
+</html>
